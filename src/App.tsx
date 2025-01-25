@@ -1,22 +1,16 @@
 import React from 'react'
-import { useForm } from 'react-hook-form'
+import { LoginForm } from './components/login-form'
+// import Page from './app/login/page'
 
 const App = () => {
-  const {handleSubmit} = useForm({
-    defaultValues: {
-      userName: null,
-      password: null 
-    },
-    
-  })
 
-return <>
-  <form onSubmit={handleSubmit((data) => console.log({data}))}>
-    <input type="text" name="userName" placeholder="User Name" />
-    <input type="password" name="password" placeholder="Password" />
-    <button type="submit">Submit</button>
-  </form>
-    </>
+  return <>
+    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
+      <div className="w-full max-w-sm">
+        <LoginForm />
+      </div>
+    </div>
+  </>
 }
 
 export default App
