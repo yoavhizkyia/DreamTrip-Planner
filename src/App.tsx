@@ -7,6 +7,7 @@ import ProtectedRoute from './components/protectedRoute'
 import { userAtom } from './atoms/user'
 import LoginPage from './app/login/page'
 import RegisterPage from './app/register/page'
+import LandingPage from './app/landingPage/page'
 
 const App = () => {
   const { logout, checkAuth } = useAuth();
@@ -21,7 +22,7 @@ const App = () => {
 
   return <>
     <Routes>
-      <Route path='/' index element={<div>LandingPage</div>} />
+      <Route path='/' index element={<LandingPage />} />
       <Route path='/login' element={<LoginPage />} />
       <Route path='/signup' element={<RegisterPage />} />
       <Route path='/home' element={
